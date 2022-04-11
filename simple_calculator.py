@@ -3,8 +3,8 @@ from tkinter import *
 root = Tk()
 root.title("simple calculator")
 
-e = Entry(root, width=35, borderwidth=5)
-e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
+e = Entry(root, width=34, borderwidth=5)
+e.grid(row=0, column=0, columnspan=4)
 
 
 function = ''
@@ -61,7 +61,7 @@ def button_clear():
     equal_state = False
 
 
-def button_back():
+def button_delete():
     e.delete(0, END)
 
 
@@ -202,9 +202,9 @@ button_add = Button(root, text="+", width=5, height=3, command=button_addition)
 button_subtract = Button(root, text="-", width=5, height=3, command=button_subtraction)
 button_multiply = Button(root, text="x", width=5, height=3, command=button_multiplication)
 button_divide = Button(root, text="/", width=5, height=3, command=button_division)
-button_equal = Button(root, text="=", width=10, height=3, command=button_equivalence)
-button_clear = Button(root, text="clear", width=10, height=3, command=button_clear)
-button_back = Button(root, text="back", width=5, height=3, command=button_back)
+button_equal = Button(root, text="=", width=14, height=3, command=button_equivalence)
+button_clear = Button(root, text="clear", width=14, height=3, command=button_clear)
+button_delete = Button(root, text="delete", width=5, height=3, command=button_delete)
 
 button_1.grid(row=3, column=0)
 button_3.grid(row=3, column=2)
@@ -228,6 +228,6 @@ button_divide.grid(row=4, column=3)
 
 button_equal.grid(row=5, column=0, columnspan=2)
 button_clear.grid(row=5, column=2, columnspan=2)
-button_back.grid(row=4, column=2)
+button_delete.grid(row=4, column=2)
 
 root.mainloop()
